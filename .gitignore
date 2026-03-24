@@ -1,0 +1,40 @@
+# Maven build output
+target/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python virtual environment
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Keystores and certificates (sensitive)
+*.p12
+*.jks
+*.pem
+*.key
+*.crt
+*.cer
+
+# Logs
+*.log
+
+# Compiled classes
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Environment files
+.env

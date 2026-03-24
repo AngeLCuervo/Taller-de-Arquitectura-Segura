@@ -1,0 +1,19 @@
+1) Copiar configuracion al servidor
+   sudo cp arepeci.duckdns.org.conf /etc/httpd/conf.d/arepeci.duckdns.org.conf
+
+2) Verificar modulos necesarios
+   sudo httpd -M | grep -E "ssl|rewrite"
+
+3) Probar sintaxis y recargar Apache
+   sudo apachectl configtest
+   sudo systemctl restart httpd
+
+4) Emitir certificado con Certbot (si aun no existe)
+   sudo certbot --apache -d arepeci.duckdns.org -d www.arepeci.duckdns.org
+
+5) Verificar renovacion automatica
+   sudo systemctl list-timers | grep certbot
+   sudo certbot renew --dry-run
+
+6) Probar HTTPS
+   https://arepeci.duckdns.org
